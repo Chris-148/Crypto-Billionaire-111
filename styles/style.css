@@ -3,9 +3,12 @@
 
 
 body {
-    padding: 0;
-    text-align: center;
-  }
+  padding: 0;
+  text-align: center;
+  background-color: #0d0221; 
+  color: #fff;
+  font-family: 'Pacifico', cursive;
+}
   
   #game-intro {
     display: flex;
@@ -14,6 +17,7 @@ body {
     padding: 20px 0px;
     background-image: url(../images/GameIntro.png);
     background-size: cover;
+    background-color:#0d0221;
     height: 100vh;
     width: 100vw;
     background-repeat: no-repeat;
@@ -51,7 +55,7 @@ body {
     align-items: center;
     padding: 20px 0px;
     background-image: url(../images/GameOver.webp);
-    background-size: auto 100%;
+    background-size: cover;
     height: 100vh;
     width: 100vw;
     background-repeat: no-repeat;
@@ -99,19 +103,23 @@ body {
       #3494E6,#EC6EAD);
       font-family: 'Pacifico', cursive;
       color: black;
-      margin-bottom: 150px;
+      margin-bottom: 300px;
       border-radius: 10px;
   }
 
   #live-bar {
-    background-color: #EC6EAD;
     width: 150px;
     padding: 20px;
     text-align: center;
-    border-radius: 10px;
-    font-family: 'Pacifico', cursive;
-    color: white;
     font-size: 1em;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark background */
+    border: 2px solid #ff69b4; /* Neon pink border */
+    border-radius: 10px;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+    box-shadow: 0 0 10px #ff69b4, 0 0 20px #00dfff; /* Neon glow effect */ */
+    font-family: 'Pacifico', cursive;
+    color: #00dfff; /* Neon blue text color */
   }
 
   #portfolio-score {
@@ -119,11 +127,17 @@ body {
     width: 300px;
     padding: 20px;
     text-align: left;
-    border-radius: 10px;
-    font-family: 'Pacifico', cursive;
-    color: white;
     font-size: 1em;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark background */
+    border: 2px solid #ff69b4; /* Neon pink border */
+    border-radius: 10px;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+    box-shadow: 0 0 10px #ff69b4, 0 0 20px #00dfff; /* Neon glow effect */ */
+    font-family: 'Pacifico', cursive;
+    color: #00dfff; /* Neon blue text color */
   }
+
 
   h2 {
     font-size: 2em;
@@ -141,10 +155,15 @@ body {
   }
 
   #game-container {
+    
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-color: #0d0221;
+    padding: 0;   
+    /* height: 200px;*/
+    width: 100vw; 
   }
 
   #storyBox {

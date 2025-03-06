@@ -8,7 +8,7 @@ constructor(){
     this.gameEndScreen = document.getElementById("game-end");
     this.gameStats = document.getElementById("game-stats");
     this.liveCountElement = document.getElementById("lives");
-    this.scoreElement = document.getElementById("portfolio-score");
+    this.scoreElement = document.getElementById("score-number");
     this.player =  new Player(
         this.gameScreen,
         200,
@@ -176,7 +176,7 @@ update() {
                 this.liveCountElement.innerText = `${this.lives}`;
                 //Portfolio value
                 this.score += this.obstacles[i].scoreValue;
-                this.scoreElement.innerText = `${this.score}`;
+                this.scoreElement.innerText = this.score.toLocaleString();
                 this.obstacles[i].element.remove();
                 this.obstacles.splice(i,1);
                 i--
@@ -186,7 +186,7 @@ update() {
             if (this.obstacles[i] && (this.obstacles[i].type === "bitcoin")) {
             // console.log(`Collided with: ${this.obstacles[i].type}`);  // Log the type
             this.score += this.obstacles[i].scoreValue;
-            this.scoreElement.innerText = `${this.score}`;
+            this.scoreElement.innerText = this.score.toLocaleString();
             this.obstacles[i].element.remove();
             this.obstacles.splice(i,1);
                 i--
