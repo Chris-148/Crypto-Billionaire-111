@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Crypto Billionaire?</title>
+  </head>
+  <body>
+    <main>
+        <div id="game-intro">
+      <!-- #game-intro is initially shown on the game start screen -->
+        <!-- <img src="./images/logo.png" alt="" class="logo-img" /> -->
+        <button id="intro-button">Let's HODL</button>
+    </div>
+        
+    
+    <!-- create a new div here to enter play details -->
+      <div id="player-details">
+      <p>Use the left, right, up and down arrow to the cryptonaut!</p>
+      </div>
+      
+
+      <div id="game-container">
+        <div id="game-stats">
+          <h2>Stats</h2>
+          <div id = "stats-container">
+          <p id="portfolio-score">Score: <span>0</span></p>
+          <p id = "live-bar">Lives: <span id="lives">3</span></p>
+        </div>
+        </div>
+        <!-- #game-screen is initially hidden using CSS style display: none -->
+        <div id="game-screen">
+          <div id="storyBox" class = "hidden">
+            <p id="storyText">hey what is up brooo</p> 
+        </div>
+          <!-- just added the story box, could cause errors -->
+        </div>
+      </div>
+
+      <!-- #game-end is initially hidden using CSS style display: none -->
+      <div id="game-end">
+        <!-- <img src="/images/GameIntro.png" alt="" class="logo-img" /> -->
+        <button id="restart-button">Restart</button>
+      </div>
+    </main>
+
+    <script type="text/javascript" src="js/FallingObject.js"></script>
+    <script type="text/javascript" src="js/Weapon/weapon.js"></script>
+    <script type="text/javascript" src="js/Weapon/projectile.js"></script>
+    <script type="text/javascript" src="js/Weapon/collectible_basic.js"></script>
+    <script type="text/javascript" src="js/Weapon/collectible_laser.js"></script>
+    <script type="text/javascript" src="js/Weapon/collectible_spread.js"></script>
+    <script type="text/javascript" src="js/bitcoin.js"></script>
+    <script type="text/javascript" src="js/pepe.js"></script>
+    <script type="text/javascript" src="js/libra.js"></script>
+    <script type="text/javascript" src="js/player.js"></script>
+    <script type="text/javascript" src="js/game.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+class Obstacle {
+    constructor (gameScreen){
+        this.gameScreen = gameScreen;
+        //console.log(this.gameScreen.offsetWidth);
+        this.leftPosition = Math.floor(500 * Math.random());
+        this.topPosition = 0;
+        this.width = 50;
+        this.height = 50;
+        this.directionY = 5;
+        this.element = document.createElement("img");
+        this.element.src = "../images/PepeCoin.png";
+        this.element.style.width = `${this.width}px`;
+        this.element.style.height = `${this.height}px`;
+        this.element.style.position = 'absolute';
+        this.element.style.left = `${this.leftPosition}px`;
+        this.element.style.top = `${this.topPosition}px`;
+        gameScreen.appendChild(this.element);
+    }
+
+    move() {
+        this.topPosition += this.directionY;
+
+    }
+
+    updatePosition() {
+        this.element.style.left = `${this.leftPosition}px`;
+        this.element.style.top = `${this.topPosition}px`;
+
+    }
+
+}

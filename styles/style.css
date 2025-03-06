@@ -1,0 +1,182 @@
+/* import google fonts */
+@@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+
+body {
+    padding: 0;
+    text-align: center;
+  }
+  
+  #game-intro {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: 20px 0px;
+    background-image: url(../images/GameIntro.png);
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  #player-details {
+    display: none;
+  }
+    
+  #game-screen {
+    display: none;
+    align-content: center;
+    padding: 20px 0px;
+    overflow: hidden;
+    position: relative;
+    background-image: url(/images/GameScreen.webp);
+    background-size: cover;
+    background-repeat: repeat-y;
+    animation: slide 5s linear infinite;
+  }
+  
+  @keyframes slide {
+    0% {
+      background-position: 0 0;
+  }
+  100% {
+      background-position: 0 1000px;  /* Match this with image height!!! Moves the background up by 600px smoothly */
+  }
+}
+
+  #game-end {
+    display: none;
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: 20px 0px;
+    background-image: url(../images/GameOver.webp);
+    background-size: auto 100%;
+    height: 100vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  .game-intro p {
+    font-size: 18px;
+    font-family: "Verdana";
+  }
+  
+  .logo-img {
+    width: 350px;
+  }
+  
+  .arrows-img {
+    width: 150px;
+  }
+  
+  body button {
+    font-size: 30px;
+    background-color: #870007;
+    color: #fff;
+    padding: 20px 40px;
+    border: 0;
+    box-shadow: 0;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    width: 300px;
+    height:100px;
+  }
+
+  #intro-button {
+    background: linear-gradient(
+      to right,
+      #3494E6,#EC6EAD);
+      font-family: 'Pacifico', cursive;
+      color: white;
+      margin-bottom: 150px;
+  }
+
+  #restart-button {
+    background: linear-gradient(
+      to right,
+      #3494E6,#EC6EAD);
+      font-family: 'Pacifico', cursive;
+      color: black;
+      margin-bottom: 150px;
+      border-radius: 10px;
+  }
+
+  #live-bar {
+    background-color: #EC6EAD;
+    width: 200px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    font-family: 'Pacifico', cursive;
+    color: white;
+    font-size: 2em;
+  }
+
+  #portfolio-score {
+    background-color: #00a8ff;
+    width: 350px;
+    padding: 20px;
+    text-align: left;
+    border-radius: 10px;
+    font-family: 'Pacifico', cursive;
+    color: white;
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 2em;
+    font-family: 'Pacifico', cursive;
+  }
+
+  #stats-container {
+    display: flex;
+    width: 650px;
+    justify-content: space-between;  
+  }
+  
+  #game-stats {
+    display:none;
+  }
+
+  #game-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  #storyBox {
+    position: absolute;
+    /* position: absolute; */
+    top: 20px;        /* Distance from the top of #game-screen */
+    right: 20px;      /* Distance from the right of #game-screen */
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark background */
+    border: 2px solid #ff69b4; /* Neon pink border */
+    border-radius: 10px;
+    width: 300px;
+    z-index: 10;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+    box-shadow: 0 0 10px #ff69b4, 0 0 20px #00dfff; /* Neon glow effect */ */
+    font-family: 'Pacifico', cursive;
+    color: #00dfff; /* Neon blue text color */
+    text-align: center;
+}
+
+.hidden {
+  opacity: 0;            /* Make it invisible but still part of the layout */
+  pointer-events: none;   /* Prevent interactions when hidden */
+}
+
+#storyBox.visible {
+  opacity: 1;
+}
+
+
+#storyText {
+  font-size: 30px;
+  text-shadow: 0 0 5px #ff69b4, 0 0 10px #00dfff; /* Text glow effect */
+}
