@@ -13,8 +13,8 @@ constructor(){
         this.gameScreen,
         200,
         400,
+        35,
         50,
-        70,
         "images/Cryptonaut.png"
     )
     this.player.currentWeapon = new Weapon ();
@@ -26,7 +26,7 @@ constructor(){
     this.gameIsOver = false; 
     this.gameIntervalId;
     this.gameLoopFrequency = Math.round(1000/60);  
-    this.pepeRespawnRate = 200; 
+    this.pepeRespawnRate = 0; 
     this.counterPepe = 0;
     this.counterBitcoin = 0;
     this.counterLibra = 0;
@@ -80,17 +80,21 @@ start(){
 }
 
 gameLoop (){
-
     
     // // spawning pepe coins
     console.log(`score is ${this.score}`)
     this.counterPepe++
     // change respawn rate to make game more difficult
-    if (this.score > 1000000 && this.score <= 10000000){
-        this.pepeRespawnRate = 100;
-    } else if (this.score>10000000){
-        this.pepeRespawnRate = 50;
-    }
+    if (this.score > 1000000 && this.score <= 3000000){
+        this.pepeRespawnRate = 300;
+    } else if (this.score>3000000  && this.score <= 5000000){
+        this.pepeRespawnRate = 200;
+    } else if (this.score>5000000  && this.score <= 8000000){
+        this.pepeRespawnRate = 100;}
+        else if (this.score>8000000){
+            this.pepeRespawnRate = 50;}
+
+    // spawning Pepe coins
     if(this.counterPepe % Math.floor(this.pepeRespawnRate*(Math.random())) === 0) {
         this.spawnObstacle(Pepe);
         console.log(this.pepeRespawnRate)
@@ -102,20 +106,19 @@ gameLoop (){
         this.spawnObstacle(Bitcoin);
     }
 
-    if (this.score > 10000000) {
+    if (this.score > 5000000) {
     // set minimum score to spawning libra coins
     this.counterLibra++
     if(this.counterLibra % Math.floor(1000*(Math.random())) === 0) {
         this.spawnObstacle(Libra);
     }   
-
-    // // //spawning basic weapon
-    this.counterBasicWeapon++
-    if(this.counterBasicWeapon % Math.floor(1000*(Math.random())) === 0) {
-        this.spawnObstacle(CollectibleBasic);
-    }   
-    } else if (this.score > 5000000){ //set minimum score to spawn advanced weapons
-
+  
+    //spawning basic weapon
+     this.counterBasicWeapon++
+     if(this.counterBasicWeapon % Math.floor(1000*(Math.random())) === 0) {
+         this.spawnObstacle(CollectibleBasic);
+     }   
+        
     //spawning laser weapon
     this.counterLaserWeapon++
     if(this.counterLaserWeapon % Math.floor(3000*(Math.random())) === 0) {

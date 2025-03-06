@@ -56,15 +56,17 @@ window.onload = function () {
       if(!myNewGame.player.isShooting){
       myNewGame.player.shoot();
       myNewGame.player.isShooting = true;
-      if (myNewGame.player.currentWeapon.type = "basic"){
+      if (myNewGame.player.currentWeapon.type === "basic"){
         setTimeout(()=>{
           myNewGame.player.isShooting = false;
-        }, 500)} else if (myNewGame.player.currentWeapon.type = "laser"){
+        }, 500)} else if (myNewGame.player.currentWeapon.type === "laser"){
           setTimeout(()=>{
+            console.log("set time out to laser")
             myNewGame.player.isShooting = false;
-          }, 50)
-        } else if (myNewGame.player.currentWeapon.type = "spread"){
+          }, 0)
+        } else if (myNewGame.player.currentWeapon.type === "spread"){
           setTimeout(()=>{
+            console.log("set time out to spread")
             myNewGame.player.isShooting = false;
           }, 200)
       }
