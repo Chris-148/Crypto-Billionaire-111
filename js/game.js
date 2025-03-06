@@ -13,14 +13,14 @@ constructor(){
         this.gameScreen,
         200,
         400,
-        100,
-        139,
+        50,
+        70,
         "../images/Cryptonaut.png"
     )
     this.player.currentWeapon = new Weapon ();
     this.obstacles = [];
-    this.height = 1000; // why does it work that i can pass gameScreen to player and obstacle and its set to width+height;
-    this.width = 1000;
+    this.height = 500; // why does it work that i can pass gameScreen to player and obstacle and its set to width+height;
+    this.width = 600;
     this.score = 0;
     this.lives = 3; 
     this.gameIsOver = false; 

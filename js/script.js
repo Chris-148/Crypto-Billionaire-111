@@ -56,9 +56,18 @@ window.onload = function () {
       if(!myNewGame.player.isShooting){
       myNewGame.player.shoot();
       myNewGame.player.isShooting = true;
-      setTimeout(() => {
-        myNewGame.player.isShooting = false;
-      }, 500);
+      if (myNewGame.player.currentWeapon.type = "basic"){
+        setTimeout(()=>{
+          myNewGame.player.isShooting = false;
+        }, 500)} else if (myNewGame.player.currentWeapon.type = "laser"){
+          setTimeout(()=>{
+            myNewGame.player.isShooting = false;
+          }, 50)
+        } else if (myNewGame.player.currentWeapon.type = "spread"){
+          setTimeout(()=>{
+            myNewGame.player.isShooting = false;
+          }, 200)
+      }
       }
     }
   });

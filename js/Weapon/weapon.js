@@ -14,12 +14,12 @@ class Weapon {
             case "laser":
                 this.color = "red";
                 this.speed = 3;
-                this.size = 30;
+                this.size = 10;
                 break;
             case "spread":
                 this.color = "green";
                 this.speed = 2;
-                this.size = 100;
+                this.size = 30;
                 break;
             default:
                 this.color = "yellow";
