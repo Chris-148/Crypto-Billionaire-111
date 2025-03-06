@@ -185,11 +185,8 @@ update() {
              //Logic when collecting bitcoins
             if (this.obstacles[i] && (this.obstacles[i].type === "bitcoin")) {
             // console.log(`Collided with: ${this.obstacles[i].type}`);  // Log the type
-            this.player.upgradeWeapon(this.obstacles[i].type); 
-            this.player.currentWeapon.upgrade(this.obstacles[i].type);
             this.score += this.obstacles[i].scoreValue;
             this.scoreElement.innerText = `${this.score}`;
-            console.log(`this player weapon type ${this.player.currentWeapon}`);
             this.obstacles[i].element.remove();
             this.obstacles.splice(i,1);
                 i--
