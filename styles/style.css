@@ -12,7 +12,7 @@ body {
     flex-direction: column-reverse;
     align-items: center;
     padding: 20px 0px;
-    background-image: url(../images/GameIntro.png);
+    background-image: url(images/GameIntro.png);
     background-size: cover;
     height: 100vh;
     width: 100vw;
@@ -50,7 +50,7 @@ body {
     flex-direction: column-reverse;
     align-items: center;
     padding: 20px 0px;
-    background-image: url(../images/GameOver.webp);
+    background-image: url(images/GameOver.webp);
     background-size: auto 100%;
     height: 100vh;
     width: 100vw;
