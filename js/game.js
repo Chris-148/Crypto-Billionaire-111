@@ -15,7 +15,7 @@ constructor(){
         400,
         50,
         70,
-        "./images/Cryptonaut.png"
+        "images/Cryptonaut.png"
     )
     this.player.currentWeapon = new Weapon ();
     this.obstacles = [];
