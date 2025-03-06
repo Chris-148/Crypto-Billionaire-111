@@ -63,12 +63,12 @@ window.onload = function () {
           setTimeout(()=>{
             console.log("set time out to laser")
             myNewGame.player.isShooting = false;
-          }, 0)
+          }, 50)
         } else if (myNewGame.player.currentWeapon.type === "spread"){
           setTimeout(()=>{
             console.log("set time out to spread")
             myNewGame.player.isShooting = false;
-          }, 200)
+          }, 500)
       }
       }
     }

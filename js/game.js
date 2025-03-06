@@ -39,17 +39,17 @@ constructor(){
         It’s simple: collect all Bitcoins 🪙 and avoid all shitcoins 💩.
         The crypto market is wild, but with diamond hands, you might just make it!`,
         3000000: `Omg. 🐸 Pepe Coin has spawned! 🚀 The hype is real, and if you couldn't resist, you'll be watching your portfolio crash! 📉 Use the arrow keys to dodge the curse of Pepe Coin!`, 
-        6000000: `Use the space key to blast away shitcoins before they trash your gains! 💥`,
-        10000000: `🦅 President Milei just dropped Libra Coin! 🚨 If you want to avoid 90% of your portfolio getting wiped out, shoot 💥 or evade! 🌀 The stakes are high—choose wisely! 📉`,
-        50000000: "Legendary performance! 🌟"
+        5000000: `Use the space key to blast away shitcoins before they trash your gains! 💥`,
+        7000000: `🦅 President Milei just dropped Libra Coin! 🚨 If you want to avoid 90% of your portfolio getting wiped out, shoot 💥 or evade! 🌀 The stakes are high—choose wisely! 📉`,
+        10000000: "Legendary performance bro, your cracked 10M USD!!! 🌟"
     };
     // Track which messages have been displayed
     this.storyDisplayed = {
         0: false,
-        1000000: false,
-        2000000: false,
         3000000: false,
-        5000000: false
+        5000000: false,
+        7000000: false,
+        10000000: false
     };
     this.storyBox = document.getElementById('storyBox');
     this.storyText = document.getElementById('storyText');
@@ -91,8 +91,8 @@ gameLoop (){
         this.pepeRespawnRate = 200;
     } else if (this.score>5000000  && this.score <= 8000000){
         this.pepeRespawnRate = 100;}
-        else if (this.score>8000000){
-            this.pepeRespawnRate = 50;}
+        else if (this.score> 7000000){
+            this.pepeRespawnRate = 25;}
 
     // spawning Pepe coins
     if(this.counterPepe % Math.floor(this.pepeRespawnRate*(Math.random())) === 0) {
