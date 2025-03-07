@@ -133,7 +133,7 @@ body {
     border-radius: 10px;
     transition: opacity 0.5s ease;
     pointer-events: none;
-    box-shadow: 0 0 10px #ff69b4, 0 0 20px #00dfff; /* Neon glow effect */ */
+    box-shadow: 0 0 10px #ff69b4, 0 0 20px #00dfff; /* Neon glow effect */ 
     font-family: 'Pacifico', cursive;
     color: #00dfff; /* Neon blue text color */
   }
@@ -179,7 +179,7 @@ body {
     z-index: 10;
     transition: opacity 0.5s ease;
     pointer-events: none;
-    box-shadow: 0 0 10px #ff69b4, 0 0 20px #00dfff; /* Neon glow effect */ */
+    box-shadow: 0 0 10px #ff69b4, 0 0 20px #00dfff; /* Neon glow effect */ 
     font-family: 'Pacifico', cursive;
     color: #00dfff; /* Neon blue text color */
     text-align: center;

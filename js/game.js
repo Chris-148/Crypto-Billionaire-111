@@ -336,13 +336,10 @@ reset() {
     this.obstacles.forEach((obstacle)=>{obstacle.element.remove()});
     this.player.projectiles.forEach((projectile)=>{projectile.element.remove()})
     this.player.projectiles = [];  // Clear the array
-    //reset all other stats
-    // this.obstacles = [];
-    // this.score = 0;
-    // this.lives = 3;
-    // this.counter = 0;
-    // this.gameIsOver = false;
-    // this.liveCountElement.innterText = `${this.lives}`;
+    this.score = 0;
+    this.lives = 3; 
+    this.liveCountElement.innerText = `${this.lives}`;
+    this.scoreElement.innerText = this.score.toLocaleString();
     }
 }
 
